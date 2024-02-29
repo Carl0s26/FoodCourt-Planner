@@ -1,3 +1,8 @@
+// Carlos: haciendo Hidrogeno Bromo Americio Bario 
+// Ethan: offline
+// Varillas: offline
+
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
