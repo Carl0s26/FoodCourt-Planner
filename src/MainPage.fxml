@@ -11,7 +11,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="558.0" prefWidth="1028.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1ffcd" height="558.0" stroke="BLACK" strokeType="INSIDE" width="806.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eaffe9" height="558.0" stroke="BLACK" strokeType="INSIDE" width="806.0" />
       <Text layoutX="835.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu">
          <font>
             <Font size="71.0" />
@@ -65,12 +65,12 @@
             <Font size="32.0" />
          </font>
       </Label>
-      <ImageView fitHeight="29.0" fitWidth="40.0" layoutX="96.0" layoutY="482.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="si" fitHeight="29.0" fitWidth="40.0" layoutX="96.0" layoutY="482.0" onMouseClicked="#egg" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@table.png" />
          </image>
       </ImageView>
-      <Button layoutX="313.0" layoutY="498.0" mnemonicParsing="false" onAction="#EditButtonClicked" prefHeight="35.0" prefWidth="110.0" text="Add Table">
+      <Button layoutX="666.0" layoutY="31.0" mnemonicParsing="false" onAction="#EditButtonClicked" prefHeight="35.0" prefWidth="110.0" text="Add Table">
          <font>
             <Font size="18.0" />
          </font>

@@ -3,6 +3,9 @@ import java.util.ArrayList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 
 
 
@@ -69,8 +72,23 @@ public class Controller {
     private Label MenuLabel7;
 
     @FXML
+    private ImageView si;
+
+    @FXML
     void EditButtonClicked(ActionEvent event) {
         
+        
+    }
+    Boolean eggs = true;
+    @FXML
+    void egg(MouseEvent event){
+        if (eggs){
+            si.setImage(new Image("table1.png"));
+            eggs = false;
+        }else{
+            si.setImage(new Image("table2.png"));
+            eggs = true;
+        }
         
     }
 

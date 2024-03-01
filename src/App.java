@@ -1,6 +1,6 @@
-// Carlos: offline
-// Ethan: offline
-// Varillas: offline
+//* Carlos: offline
+//* Ethan: offline
+//* Sebastian: offline
 
 
 import javafx.application.Application;
