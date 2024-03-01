@@ -1,4 +1,4 @@
-// Carlos: haciendo Hidrogeno Bromo Americio Bario 
+// Carlos: offline
 // Ethan: offline
 // Varillas: offline
 
