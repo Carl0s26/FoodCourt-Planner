@@ -2,6 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -15,12 +17,12 @@
             <Font size="71.0" />
          </font>
       </Text>
-      <Button layoutX="834.0" layoutY="488.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="173.0" text="EDIT">
+      <Button layoutX="834.0" layoutY="480.0" mnemonicParsing="false" onAction="#EditButtonClicked" prefHeight="44.0" prefWidth="173.0" text="EDIT">
          <font>
             <Font size="33.0" />
          </font>
       </Button>
-      <Label layoutX="886.0" layoutY="98.0" text="eeee" textAlignment="CENTER">
+      <Label fx:id="MenuLabel1" alignment="CENTER" layoutX="818.0" layoutY="115.0" prefHeight="47.0" prefWidth="205.0" text="Hamburguesa">
          <font>
             <Font size="32.0" />
          </font>
@@ -33,5 +35,45 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="456.0" layoutX="798.0" layoutY="101.0" stroke="BLACK" strokeType="INSIDE" width="7.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="13.0" layoutY="544.0" stroke="BLACK" strokeType="INSIDE" width="803.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="456.0" layoutX="-2.0" layoutY="102.0" stroke="BLACK" strokeType="INSIDE" width="12.0" />
+      <Label fx:id="MenuLabel2" alignment="CENTER" layoutX="820.0" layoutY="162.0" prefHeight="47.0" prefWidth="205.0" text="Pollo Frito">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="MenuLabel3" alignment="CENTER" layoutX="820.0" layoutY="209.0" prefHeight="47.0" prefWidth="205.0" text="Quesadilla">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="MenuLabel4" alignment="CENTER" layoutX="820.0" layoutY="256.0" prefHeight="47.0" prefWidth="205.0" text="Sandwich">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="MenuLabel5" alignment="CENTER" layoutX="820.0" layoutY="303.0" prefHeight="47.0" prefWidth="205.0" text="Croasant">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="MenuLabel6" alignment="CENTER" layoutX="820.0" layoutY="349.0" prefHeight="47.0" prefWidth="205.0" text="Pizza">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="MenuLabel7" alignment="CENTER" layoutX="820.0" layoutY="396.0" prefHeight="47.0" prefWidth="205.0" text="Varios Jugos">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="29.0" fitWidth="40.0" layoutX="96.0" layoutY="482.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@table.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="313.0" layoutY="498.0" mnemonicParsing="false" onAction="#EditButtonClicked" prefHeight="35.0" prefWidth="110.0" text="Add Table">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
    </children>
 </Pane>
