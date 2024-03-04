@@ -6,23 +6,39 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
 
 
 
 public class Controller {
 
     ArrayList<Object> listaDeMesas = new ArrayList<>();
-    int id =0;
+
+    static int id = 1;
     int tableId;
     int tableXcords;
     int tableYcords;
     boolean tableStatus;
+    javafx.scene.image.ImageView tableImageFrame;
+    Image tableImage;
+    
     public void Table(int tableYcords, int tableXcords, int tableId, boolean tableStatus) {
         this.tableId = tableId;
         this.tableXcords = tableXcords;
         this.tableYcords = tableYcords;
         this.tableStatus = tableStatus;
+        tableImage = new Image("table.png");
+        tableImageFrame = new javafx.scene.image.ImageView(tableImage);
+        tableImageFrame.setFitHeight(25);
+        tableImageFrame.setFitWidth(25);
+        tableImageFrame.setLayoutX(tableXcords);
+        tableImageFrame.setLayoutY(tableYcords);
+        PaneId.getChildren().add(tableImageFrame);
+        
     }
+    // public void setTAbleImage(){
+    //     this.tableImage = tableImage;
+    // }
 
     public int getTableId() {
         return tableId;
@@ -72,23 +88,27 @@ public class Controller {
     private Label MenuLabel7;
 
     @FXML
+    private Pane PaneId;
+
+    @FXML
     private ImageView si;
 
     @FXML
     void EditButtonClicked(ActionEvent event) {
-        
-        
+        Table(tableYcords, tableXcords+(id*2), id, tableStatus);
+        id +=1;
+        System.out.println(id);
     }
     Boolean eggs = true;
     @FXML
     void egg(MouseEvent event){
-        if (eggs){
-            si.setImage(new Image("table1.png"));
-            eggs = false;
-        }else{
-            si.setImage(new Image("table2.png"));
-            eggs = true;
-        }
+        // if (eggs){
+        //     si.setImage(new Image("table1.png"));
+        //     eggs = false;
+        // }else{
+        //     si.setImage(new Image("table2.png"));
+        //     eggs = true;
+        // }
         
     }
 
