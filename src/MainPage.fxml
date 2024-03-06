@@ -65,15 +65,16 @@
             <Font size="32.0" />
          </font>
       </Label>
-      <ImageView fx:id="si" fitHeight="29.0" fitWidth="40.0" layoutX="96.0" layoutY="482.0" onMouseClicked="#egg" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="si" fitHeight="29.0" fitWidth="40.0" layoutX="96.0" layoutY="482.0" onMouseClicked="#egg" onMouseDragged="#drag" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@table.png" />
          </image>
       </ImageView>
-      <Button layoutX="666.0" layoutY="31.0" mnemonicParsing="false" onAction="#EditButtonClicked" prefHeight="35.0" prefWidth="110.0" text="Add Table">
+      <Button layoutX="666.0" layoutY="31.0" mnemonicParsing="false" onAction="#add_table" prefHeight="35.0" prefWidth="110.0" text="Add Table">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="12.0" layoutX="482.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="176.0" />
    </children>
 </Pane>
