@@ -16,6 +16,9 @@ public class Controller {
 
     ArrayList<Object> listaDeMesas = new ArrayList<>();
 
+    Boolean free = true;
+    Boolean moves = false;
+    Boolean editmode = false;
     static int id = 1;
     int tableId;
     int tableXcords;
@@ -37,10 +40,64 @@ public class Controller {
         tableImageFrame.setLayoutY(tableYcords);
         PaneId.getChildren().add(tableImageFrame);
         
+
+        tableImageFrame.setOnMouseClicked(event ->{
+            
+            if (!editmode){
+                if (event.getButton() == MouseButton.SECONDARY){
+                    if (free){
+                        tableImageFrame.setImage(new Image("table1.png"));
+                        free = false;
+                    }else{
+                        tableImageFrame.setImage(new Image("table2.png"));
+                        free = true;
+                    }
+                }
+            }
+
+        });
+
+        tableImageFrame.setOnMouseDragged(event -> {
+            System.out.println("YEY");
+            if(moves){
+                if (event.getSceneX() < 10.00){
+                    tableImageFrame.setLayoutX(10.0);
+                    
+                }else if (event.getSceneX() > 769.00){
+                    tableImageFrame.setLayoutX(769.0);
+                
+                }else if (event.getSceneX() < 489.00 && event.getSceneX() > 221 && event.getSceneY() < 180){
+                    tableImageFrame.setLayoutX(489.0);
+                }else if (event.getSceneX() > 221.00 && event.getSceneX() < 300.00 && event.getSceneY() < 181){
+                    tableImageFrame.setLayoutX(221.0);
+    
+                }else{    
+                    tableImageFrame.setLayoutX(event.getSceneX());
+                }
+    
+                if (event.getSceneY() > 515.00){
+                    tableImageFrame.setLayoutY(515.0);
+                }else if (event.getSceneY() < 141.00 && event.getSceneX() < 221){
+                    tableImageFrame.setLayoutY(141.0);
+                
+                }else if (event.getSceneY() < 8.00){
+                    tableImageFrame.setLayoutY(8.0);
+    
+                }else if (event.getSceneY() < 181.00 && event.getSceneX() > 250 && event.getSceneX() < 460){
+                    tableImageFrame.setLayoutY(181.0);
+    
+                }else{    
+                    tableImageFrame.setLayoutY(event.getSceneY());
+                }
+    
+                if (event.getSceneY() < 141.00 && event.getSceneX() < 221){
+                    
+                }
+            }
+        });
+
     }
-    // public void setTAbleImage(){
-    //     this.tableImage = tableImage;
-    // }
+ 
 
     public int getTableId() {
         return tableId;
@@ -100,11 +157,13 @@ public class Controller {
         if (free){
             editmode = true;
             si.setImage(new Image("table3.png"));
+            tableImageFrame.setImage(new Image("table3.png"));
             free = false;
             moves = true;
         }else{
             editmode = false;
             si.setImage(new Image("table.png"));
+            tableImageFrame.setImage(new Image("table3.png"));
             free = true;
             moves = false;
         }
@@ -117,9 +176,7 @@ public class Controller {
         System.out.println(id);
     }
 
-    Boolean free = true;
-    Boolean moves = false;
-    Boolean editmode = false;
+    
     
     @FXML
     void egg(MouseEvent event){
@@ -155,8 +212,6 @@ public class Controller {
                 si.setLayoutX(event.getSceneX());
             }
 
-
-
             if (event.getSceneY() > 515.00){
                 si.setLayoutY(515.0);
             }else if (event.getSceneY() < 141.00 && event.getSceneX() < 221){
@@ -176,8 +231,8 @@ public class Controller {
                 
             }
 
-            System.out.println("X: " + event.getSceneX());
-            System.out.println("Y: " + event.getSceneY());
+            //System.out.println("X: " + event.getSceneX());
+            //System.out.println("Y: " + event.getSceneY());
         }
          
     }
