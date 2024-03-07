@@ -142,12 +142,15 @@ public class Controller {
 
             if (event.getSceneX() < 10.00){
                 si.setLayoutX(10.0);
+                
             }else if (event.getSceneX() > 769.00){
                 si.setLayoutX(769.0);
-
-
-
             
+            }else if (event.getSceneX() < 489.00 && event.getSceneX() > 221 && event.getSceneY() < 180){
+                si.setLayoutX(489.0);
+            }else if (event.getSceneX() > 221.00 && event.getSceneX() < 300.00 && event.getSceneY() < 181){
+                si.setLayoutX(221.0);
+
             }else{    
                 si.setLayoutX(event.getSceneX());
             }
@@ -156,16 +159,25 @@ public class Controller {
 
             if (event.getSceneY() > 515.00){
                 si.setLayoutY(515.0);
+            }else if (event.getSceneY() < 141.00 && event.getSceneX() < 221){
+                si.setLayoutY(141.0);
+            
             }else if (event.getSceneY() < 8.00){
                 si.setLayoutY(8.0);
-            }else if (event.getSceneY() < 41.00){
-                si.setLayoutY(41.0);
+
+            }else if (event.getSceneY() < 181.00 && event.getSceneX() > 250 && event.getSceneX() < 460){
+                si.setLayoutY(181.0);
 
             }else{    
                 si.setLayoutY(event.getSceneY());
             }
 
-            System.out.println(event.getSceneY());
+            if (event.getSceneY() < 141.00 && event.getSceneX() < 221){
+                
+            }
+
+            System.out.println("X: " + event.getSceneX());
+            System.out.println("Y: " + event.getSceneY());
         }
          
     }
