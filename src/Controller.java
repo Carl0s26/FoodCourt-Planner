@@ -15,10 +15,11 @@ import javafx.scene.layout.Pane;
 public class Controller {
 
     ArrayList<Object> listaDeMesas = new ArrayList<>();
+    ArrayList<ImageView> tableImageFrames = new ArrayList<>();
 
     Boolean free = true;
     Boolean moves = false;
-    Boolean editmode = false;
+    Boolean edit_mode = false;
     static int id = 1;
     int tableId;
     int tableXcords;
@@ -28,14 +29,19 @@ public class Controller {
     Image tableImage;
     
     public void Table(int tableYcords, int tableXcords, int tableId, boolean tableStatus) {
+        if (moves){
+            tableImage = new Image("table3.png");
+        }else{
+            tableImage = new Image("table.png");
+        }
+
         this.tableId = tableId;
         this.tableXcords = tableXcords;
         this.tableYcords = tableYcords;
         this.tableStatus = tableStatus;
-        tableImage = new Image("table.png");
         tableImageFrame = new javafx.scene.image.ImageView(tableImage);
-        tableImageFrame.setFitHeight(25);
-        tableImageFrame.setFitWidth(25);
+        tableImageFrame.setFitHeight(29);
+        tableImageFrame.setFitWidth(29);
         tableImageFrame.setLayoutX(tableXcords);
         tableImageFrame.setLayoutY(tableYcords);
         PaneId.getChildren().add(tableImageFrame);
@@ -43,7 +49,7 @@ public class Controller {
 
         tableImageFrame.setOnMouseClicked(event ->{
             
-            if (!editmode){
+            if (!edit_mode){
                 if (event.getButton() == MouseButton.SECONDARY){
                     if (free){
                         tableImageFrame.setImage(new Image("table1.png"));
@@ -88,10 +94,6 @@ public class Controller {
     
                 }else{    
                     tableImageFrame.setLayoutY(event.getSceneY());
-                }
-    
-                if (event.getSceneY() < 141.00 && event.getSceneX() < 221){
-                    
                 }
             }
         });
@@ -155,17 +157,23 @@ public class Controller {
     @FXML
     void EditButtonClicked(ActionEvent event) {
         if (free){
-            editmode = true;
+            edit_mode = true;
             si.setImage(new Image("table3.png"));
-            tableImageFrame.setImage(new Image("table3.png"));
+            changeTableImage("table3.png");
             free = false;
             moves = true;
         }else{
-            editmode = false;
+            edit_mode = false;
             si.setImage(new Image("table.png"));
-            tableImageFrame.setImage(new Image("table3.png"));
+            changeTableImage("table.png");
             free = true;
             moves = false;
+        }
+    }
+
+    public void changeTableImage(String image) {
+        for (ImageView frame : tableImageFrames) {
+            frame.setImage(new Image(image));
         }
     }
 
@@ -173,6 +181,7 @@ public class Controller {
     void add_table(ActionEvent event) {
         Table(tableYcords, tableXcords + 50, id, tableStatus);
         id += 1;
+        tableImageFrames.add(tableImageFrame);
         System.out.println(id);
     }
 
@@ -180,7 +189,7 @@ public class Controller {
     
     @FXML
     void egg(MouseEvent event){
-        if (!editmode){
+        if (!edit_mode){
             if (event.getButton() == MouseButton.SECONDARY){
                 if (free){
                     si.setImage(new Image("table1.png"));
