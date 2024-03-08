@@ -21,6 +21,7 @@ public class Controller {
     Boolean moves = false;
     Boolean edit_mode = false;
     static int id = 0;
+    int lastTableId = 0;
     int tableId;
     int tableXcords;
     int tableYcords;
@@ -48,14 +49,14 @@ public class Controller {
         
 
         tableImageFrame.setOnMouseClicked(event ->{
-            
+            lastTableId = tableId;
             if (!edit_mode){
                 if (event.getButton() == MouseButton.SECONDARY){
                     if (free){
-                        tableImageFrame.setImage(new Image("table1.png"));
+                        tableImageFrames.get(tableId).setImage(new Image("table1.png"));
                         free = false;
                     }else{
-                        tableImageFrame.setImage(new Image("table2.png"));
+                        tableImageFrames.get(tableId).setImage(new Image("table2.png"));
                         free = true;
                     }
                 }
@@ -64,7 +65,6 @@ public class Controller {
         });
 
         tableImageFrame.setOnMouseDragged(event -> {
-            System.out.println("YEY");
             if(moves){
                 if (event.getSceneX() < 10.00){
                     tableImageFrames.get(tableId).setLayoutX(10.0);
@@ -241,7 +241,10 @@ public class Controller {
             //System.out.println("X: " + event.getSceneX());
             //System.out.println("Y: " + event.getSceneY());
         }
-         
+    }
+    @FXML
+    void delete_table(ActionEvent event) {
+        tableImageFrames.get(lastTableId).setVisible(false);
     }
 
 }
