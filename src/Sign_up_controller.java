@@ -8,13 +8,13 @@ public class Sign_up_controller {
 
     @FXML
     private PasswordField Sign_up_Gmail;
-String str_Gmail = Sign_up_Gmail.getText();
+    //
     @FXML
     private PasswordField Sign_up_Password;
-    String str_Password = Sign_up_Password.getText();
+    //
     @FXML
     private PasswordField Sign_up_Username;
-    String str_Username = Sign_up_Username.getText();
+    //
     
     @FXML
     private Button Sign_up_button;
@@ -24,7 +24,11 @@ String str_Gmail = Sign_up_Gmail.getText();
     
     @FXML
     void Onbuttonclick(ActionEvent event) {
-        accounts(str_Username, str_Password);
+        //5accounts(str_Username, str_Password);
+        String str_Gmail = Sign_up_Gmail.getText();
+        String str_Password = Sign_up_Password.getText();
+        String str_Username = Sign_up_Username.getText();
+
     }
 
     public void accounts(String str_username, String str_Password){
@@ -36,7 +40,6 @@ String str_Gmail = Sign_up_Gmail.getText();
         } catch (Exception e) {
             System.out.println("Something happened " + e);
         
-      
         }
     }
 }

@@ -18,6 +18,6 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <Button fx:id="Sign_up_button" layoutX="147.0" layoutY="316.0" mnemonicParsing="false" onAction="#Onbuttonclick" text="Sing up  " />
+      <Button fx:id="Sign_up_button" layoutX="147.0" layoutY="316.0" mnemonicParsing="false" onAction="#Onbuttonclick" text="Sign up  " />
    </children>
 </Pane>
