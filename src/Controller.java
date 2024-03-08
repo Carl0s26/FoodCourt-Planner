@@ -20,7 +20,7 @@ public class Controller {
     Boolean free = true;
     Boolean moves = false;
     Boolean edit_mode = false;
-    static int id = 1;
+    static int id = 0;
     int tableId;
     int tableXcords;
     int tableYcords;
@@ -67,39 +67,39 @@ public class Controller {
             System.out.println("YEY");
             if(moves){
                 if (event.getSceneX() < 10.00){
-                    tableImageFrame.setLayoutX(10.0);
-                    
+                    tableImageFrames.get(tableId).setLayoutX(10.0);
+                
                 }else if (event.getSceneX() > 769.00){
-                    tableImageFrame.setLayoutX(769.0);
+                     tableImageFrames.get(tableId).setLayoutX(769.0);
                 
                 }else if (event.getSceneX() < 489.00 && event.getSceneX() > 221 && event.getSceneY() < 180){
-                    tableImageFrame.setLayoutX(489.0);
+                     tableImageFrames.get(tableId).setLayoutX(489.0);
                 }else if (event.getSceneX() > 221.00 && event.getSceneX() < 300.00 && event.getSceneY() < 181){
-                    tableImageFrame.setLayoutX(221.0);
+                     tableImageFrames.get(tableId).setLayoutX(221.0);
     
                 }else{    
-                    tableImageFrame.setLayoutX(event.getSceneX());
+                     tableImageFrames.get(tableId).setLayoutX(event.getSceneX());
                 }
     
                 if (event.getSceneY() > 515.00){
-                    tableImageFrame.setLayoutY(515.0);
+                     tableImageFrames.get(tableId).setLayoutY(515.0);
                 }else if (event.getSceneY() < 141.00 && event.getSceneX() < 221){
-                    tableImageFrame.setLayoutY(141.0);
+                     tableImageFrames.get(tableId).setLayoutY(141.0);
                 
                 }else if (event.getSceneY() < 8.00){
-                    tableImageFrame.setLayoutY(8.0);
+                     tableImageFrames.get(tableId).setLayoutY(8.0);
     
                 }else if (event.getSceneY() < 181.00 && event.getSceneX() > 250 && event.getSceneX() < 460){
-                    tableImageFrame.setLayoutY(181.0);
+                     tableImageFrames.get(tableId).setLayoutY(181.0);
     
                 }else{    
-                    tableImageFrame.setLayoutY(event.getSceneY());
+                     tableImageFrames.get(tableId).setLayoutY(event.getSceneY());
                 }
             }
         });
 
     }
- 
+
 
     public int getTableId() {
         return tableId;
@@ -184,8 +184,6 @@ public class Controller {
         tableImageFrames.add(tableImageFrame);
         System.out.println(id);
     }
-
-    
     
     @FXML
     void egg(MouseEvent event){
