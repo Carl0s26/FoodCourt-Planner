@@ -7,29 +7,28 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="424.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login_controller">
    <children>
-      <Text layoutX="255.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+      <Text layoutX="170.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <PasswordField fx:id="Password_field" layoutX="225.0" layoutY="188.0" promptText="Password" />
-      <PasswordField fx:id="Password_confirm_field" layoutX="224.0" layoutY="253.0" promptText="Password confirm" />
-      <Button fx:id="Login_button" layoutX="274.0" layoutY="297.0" mnemonicParsing="false" onAction="#Onbuttonclick" text="Login " />
-      <TextField fx:id="User_name_field" layoutX="228.0" layoutY="128.0" promptText="User name" />
-      <Text layoutX="228.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+      <PasswordField fx:id="Password_field" layoutX="132.0" layoutY="187.0" promptText="Password" />
+      <PasswordField fx:id="Password_confirm_field" layoutX="130.0" layoutY="248.0" promptText="Password confirm" />
+      <Button fx:id="Login_button" layoutX="180.0" layoutY="292.0" mnemonicParsing="false" onAction="#login" text="Login " />
+      <TextField fx:id="User_name_field" layoutX="134.0" layoutY="117.0" promptText="User name" />
+      <Text layoutX="133.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="232.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User name">
+      <Text layoutX="136.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User name">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="228.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password confirm">
+      <Text layoutX="132.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password confirm">
          <font>
             <Font size="18.0" />
          </font>
