@@ -179,7 +179,16 @@ public class Controller {
 
     @FXML
     void add_table(ActionEvent event) {
-        Table(tableYcords, tableXcords + 50, id, tableStatus);
+        if (tableXcords + 50 > 769){
+            Table(tableYcords + 40, 30, id, tableStatus);
+
+        }else{
+            if (tableXcords == 0){
+                Table(tableYcords, tableXcords + 30, id, tableStatus);
+            }else{
+                Table(tableYcords, tableXcords + 50, id, tableStatus);
+            }  
+        }
         id += 1;
         tableImageFrames.add(tableImageFrame);
         System.out.println(id);
