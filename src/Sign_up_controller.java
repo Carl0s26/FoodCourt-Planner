@@ -1,11 +1,16 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
+import javafx.stage.Stage;
+
 import java.io.File;
 import java.io.FileWriter;
 public class Sign_up_controller {
-
+public static Boolean off = false;
     @FXML
     private PasswordField Sign_up_Gmail;
     //
@@ -41,6 +46,19 @@ public class Sign_up_controller {
             accounts(str_Username, str_Password);
         }
         //accounts(str_Username, str_Password);
+                try{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Login_controller.java"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();  
+
+            Stage loginStage = (Stage) Sign_up_button.getScene().getWindow();
+            loginStage.close();
+            
+            off = true;
+        } catch (Exception e) {}
     }
 
     public void accounts(String str_username, String str_Password){
