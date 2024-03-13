@@ -250,10 +250,18 @@ public class Controller {
             //System.out.println("X: " + event.getSceneX());
             //System.out.println("Y: " + event.getSceneY());
         }
+<<<<<<< Updated upstream
     }
     @FXML
     void delete_table(ActionEvent event) {
         tableImageFrames.get(lastTableId).setVisible(false);
+=======
+         
+    //}
+
+    //oid Reservation_pane(Reservation_pane){
+
+>>>>>>> Stashed changes
     }
 
 }
