@@ -140,6 +140,9 @@ public class Controller {
     private Label MenuLabel4;
 
     @FXML
+    private Label Desk_feedback;
+
+    @FXML
     private Label MenuLabel5;
 
     @FXML
@@ -204,10 +207,11 @@ public class Controller {
                 }else{
                     si.setImage(new Image("table2.png"));
                     free = true;
+                    
                 }
             }
         }
-        
+        Reservation_pane(PaneId);
     }
     @FXML
     void drag(MouseEvent event) {
@@ -257,8 +261,19 @@ public class Controller {
          
     }
 
-    //oid Reservation_pane(Reservation_pane){
 
-    //}
+    boolean Desk_feedbackBoleean(Label Desk_feedback){
+        Boolean Deskstatus = false;
+        return Deskstatus; 
+    }
+
+    void Reservation_pane(Pane Reservation_pane){
+        if(!free){
+            Reservation_pane.setVisible(true);
+        }
+        else if (free){
+            Desk_feedback.setVisible(true);
+        }
+    }
 
 }
