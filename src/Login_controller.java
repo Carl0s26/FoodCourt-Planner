@@ -37,5 +37,22 @@ public class Login_controller {
             
             off = true;
         } catch (Exception e) {}
+
+    }
+    @FXML
+    void Onbuttonclick(ActionEvent event) {
+        try{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Sign_up_window.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();  
+
+            Stage loginStage = (Stage) Login_button.getScene().getWindow();
+            loginStage.close();
+            
+            off = true;
+        } catch (Exception e) {}
     }
 }

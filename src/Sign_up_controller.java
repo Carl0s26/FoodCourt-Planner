@@ -47,7 +47,7 @@ public static Boolean off = false;
         }
         //accounts(str_Username, str_Password);
                 try{
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Login_controller.java"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Login_window.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
@@ -63,7 +63,9 @@ public static Boolean off = false;
 
     public void accounts(String str_username, String str_Password){
         try {
+
             FileWriter myObj = new FileWriter("accounts.txt", true);
+
             myObj.write(str_username);
             myObj.write(" ");
             myObj.write(str_Password);
