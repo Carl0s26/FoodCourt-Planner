@@ -2,6 +2,8 @@
 //* Ethan: offline
 //* Sebastian: offline
 
+import java.io.IOException;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -23,4 +25,10 @@ public class App extends Application {
         stage.setScene(scene);
         stage.show();
     }
+    @Override
+    public void stop(){
+        System.out.println("Stage is closing");
+        // Save file
+    }
+
 }

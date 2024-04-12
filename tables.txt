@@ -1,0 +1,10 @@
+214 506 false
+106 387 true
+99 264 true
+210 194 false
+545 364 true
+603 147 true
+273 342 true
+394 436 false
+50 464 false
+588 322 true
