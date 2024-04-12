@@ -85,31 +85,31 @@ public class Controller {
                     tableImageFrames.get(tableId).setLayoutX(10.0);
                 }else if (event.getSceneX() > 769.00){
                      tableImageFrames.get(tableId).setLayoutX(769.0);
-                     System.out.println(tableId);
                 }else if (event.getSceneX() < 489.00 && event.getSceneX() > 221 && event.getSceneY() < 180){
                      tableImageFrames.get(tableId).setLayoutX(489.0);
                 }else if (event.getSceneX() > 221.00 && event.getSceneX() < 300.00 && event.getSceneY() < 181){
                      tableImageFrames.get(tableId).setLayoutX(221.0);
-                     System.out.println(tableId);
+                }else if (event.getSceneX() > 313.00 && event.getSceneX() < 386.00 && event.getSceneY() > 182 && event.getSceneY() < 282 ){
+                    tableImageFrames.get(tableId).setLayoutX(313.0);
+                }else if (event.getSceneX() > 600.00 && event.getSceneY() < 107 ){
+                    tableImageFrames.get(tableId).setLayoutX(600.0);
                 }else{    
                      tableImageFrames.get(tableId).setLayoutX(event.getSceneX());
-                     System.out.println(tableId);
                     }
     
                 if (event.getSceneY() > 515.00){
                      tableImageFrames.get(tableId).setLayoutY(515.0);
                 }else if (event.getSceneY() < 141.00 && event.getSceneX() < 221){
                      tableImageFrames.get(tableId).setLayoutY(141.0);
-                     System.out.println(tableId);
                 }else if (event.getSceneY() < 8.00){
                      tableImageFrames.get(tableId).setLayoutY(8.0);
-                     System.out.println(tableId);
                 }else if (event.getSceneY() < 181.00 && event.getSceneX() > 250 && event.getSceneX() < 460){
                      tableImageFrames.get(tableId).setLayoutY(181.0);
-                     System.out.println(tableId);
+                }else if (event.getSceneY() < 107.00 && event.getSceneX() > 629){
+                    tableImageFrames.get(tableId).setLayoutY(107.0);
+                    
                 }else{    
                     tableImageFrames.get(tableId).setLayoutY(event.getSceneY());
-                    System.out.println(tableId);
                 }
             }
         });
@@ -227,7 +227,6 @@ public class Controller {
                 
             } 
             myObj.close();
-            System.out.println("z");
             Platform.exit();
             } catch (IOException e) {
             e.printStackTrace();
@@ -330,6 +329,7 @@ public class Controller {
             addTableButton.setDisable(true);
             saveButton.setVisible(false);
             saveButton.setDisable(true);
+        }
             try {
                 File myObj = new File("tables.txt");
                 Scanner myReader = new Scanner(myObj);
@@ -352,9 +352,9 @@ public class Controller {
                 System.out.println("An error occurred.");
                 e.printStackTrace();
             }
-        }
-        else{
+        // }
+        // else{
             
-        }
+        // }
     }
 }

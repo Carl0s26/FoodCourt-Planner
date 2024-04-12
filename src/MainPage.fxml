@@ -21,7 +21,7 @@
             <Font size="33.0" />
          </font>
       </Button>
-      <Label fx:id="MenuLabel1" alignment="CENTER" layoutX="818.0" layoutY="115.0" prefHeight="47.0" prefWidth="205.0" text="Hamburguesa">
+      <Label fx:id="MenuLabel1" alignment="CENTER" layoutX="818.0" layoutY="115.0" prefHeight="47.0" prefWidth="205.0" text="Hamburger">
          <font>
             <Font size="32.0" />
          </font>
@@ -33,7 +33,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="456.0" layoutX="798.0" layoutY="101.0" stroke="BLACK" strokeType="INSIDE" width="7.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="13.0" layoutY="544.0" stroke="BLACK" strokeType="INSIDE" width="803.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="456.0" layoutX="-2.0" layoutY="102.0" stroke="BLACK" strokeType="INSIDE" width="12.0" />
-      <Label fx:id="MenuLabel2" alignment="CENTER" layoutX="820.0" layoutY="162.0" prefHeight="47.0" prefWidth="205.0" text="Pollo Frito">
+      <Label fx:id="MenuLabel2" alignment="CENTER" layoutX="820.0" layoutY="162.0" prefHeight="47.0" prefWidth="205.0" text="Fried Chicken">
          <font>
             <Font size="32.0" />
          </font>
@@ -48,7 +48,7 @@
             <Font size="32.0" />
          </font>
       </Label>
-      <Label fx:id="MenuLabel5" alignment="CENTER" layoutX="820.0" layoutY="303.0" prefHeight="47.0" prefWidth="205.0" text="Croasant">
+      <Label fx:id="MenuLabel5" alignment="CENTER" layoutX="820.0" layoutY="303.0" prefHeight="47.0" prefWidth="205.0" text="Croissant">
          <font>
             <Font size="32.0" />
          </font>
@@ -58,7 +58,7 @@
             <Font size="32.0" />
          </font>
       </Label>
-      <Label fx:id="MenuLabel7" alignment="CENTER" layoutX="820.0" layoutY="396.0" prefHeight="47.0" prefWidth="205.0" text="Varios Jugos">
+      <Label fx:id="MenuLabel7" alignment="CENTER" layoutX="820.0" layoutY="396.0" prefHeight="47.0" prefWidth="205.0" text="Juice">
          <font>
             <Font size="32.0" />
          </font>
@@ -79,16 +79,13 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Pane fx:id="Reservation_pane" layoutX="617.0" layoutY="98.0" prefHeight="200.0" prefWidth="200.0">
-         <children>
-            <TextField fx:id="Customer_name" layoutX="26.0" layoutY="35.0" promptText="Customer Name" />
-            <TextField fx:id="Reservation_time" layoutX="26.0" layoutY="118.0" promptText="Reservation time" />
-         </children>
-      </Pane>
+      <Pane fx:id="Reservation_pane" layoutX="617.0" layoutY="98.0" prefHeight="200.0" prefWidth="200.0" />
       <Label fx:id="Desk_feedback" layoutX="282.0" layoutY="290.0" text="This desk is alredy ocuped" visible="false">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
+      <TextField fx:id="Customer_name" layoutX="15.0" layoutY="16.0" promptText="Customer Name" />
+      <TextField fx:id="Reservation_time" layoutX="15.0" layoutY="79.0" promptText="Reservation time" />
    </children>
 </Pane>
