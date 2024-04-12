@@ -34,11 +34,7 @@
             <Font size="18.0" />
          </font>
       </Text>
-<<<<<<< Updated upstream
-      <Button layoutX="175.0" layoutY="340.0" mnemonicParsing="false" onAction="#Onbuttonclick" text="Sign up " />
-=======
       <Button fx:id="SignUp_button" layoutX="214.0" layoutY="292.0" mnemonicParsing="false" onAction="#SignUp" text="Sign up" />
       <Label fx:id="feedbackLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="66.0" layoutY="334.0" prefHeight="25.0" prefWidth="301.0" textAlignment="CENTER" textFill="#c63838" />
->>>>>>> Stashed changes
    </children>
 </Pane>

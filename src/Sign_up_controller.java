@@ -48,24 +48,10 @@ public static Boolean off = false;
         }
         else{
             accounts(str_Username, str_Password);
-<<<<<<< Updated upstream
         }
         //accounts(str_Username, str_Password);
                 try{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Login_window.fxml"));
-=======
-        
-        try{
-            // FXMLLoader loader = new FXMLLoader(getClass().getResource("Login_controller.java"));
-            // Parent root = loader.load();
-            // Scene scene = new Scene(root);
-            // Stage stage = new Stage();
-            // stage.setScene(scene);
-            // stage.show();  
-            // Stage loginStage = (Stage) Sign_up_button.getScene().getWindow();
-            //loginStage.close();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("MainPage.fxml"));
->>>>>>> Stashed changes
             Parent root = loader.load();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
@@ -77,7 +63,7 @@ public static Boolean off = false;
             off = true;
         } catch (Exception e) {}
         }
-    }
+    
 
     public void accounts(String str_username, String str_Password){
         try {
