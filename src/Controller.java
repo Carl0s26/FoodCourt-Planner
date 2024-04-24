@@ -329,7 +329,6 @@ public class Controller {
             addTableButton.setDisable(true);
             saveButton.setVisible(false);
             saveButton.setDisable(true);
-        }
             try {
                 File myObj = new File("tables.txt");
                 Scanner myReader = new Scanner(myObj);
@@ -352,9 +351,9 @@ public class Controller {
                 System.out.println("An error occurred.");
                 e.printStackTrace();
             }
-        // }
-        // else{
+        }
+        else{
             
-        // }
+        }
     }
 }

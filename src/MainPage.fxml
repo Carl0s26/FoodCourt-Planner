@@ -85,7 +85,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="Customer_name" layoutX="15.0" layoutY="16.0" promptText="Customer Name" />
-      <TextField fx:id="Reservation_time" layoutX="15.0" layoutY="79.0" promptText="Reservation time" />
+      <TextField fx:id="Customer_name" layoutX="15.0" layoutY="16.0" promptText="Customer Name" visible="false" />
+      <TextField fx:id="Reservation_time" layoutX="15.0" layoutY="79.0" promptText="Reservation time" visible="false" />
    </children>
 </Pane>

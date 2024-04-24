@@ -48,7 +48,7 @@ public static Boolean off = false;
         }
         else{
             accounts(str_Username, str_Password);
-        }
+        
         //accounts(str_Username, str_Password);
                 try{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Login_window.fxml"));
@@ -62,7 +62,9 @@ public static Boolean off = false;
             SignUpStage.close();
             off = true;
         } catch (Exception e) {}
+    }
         }
+        
     
 
     public void accounts(String str_username, String str_Password){

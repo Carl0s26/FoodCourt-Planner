@@ -19,6 +19,6 @@
          </font>
       </Text>
       <Button layoutX="139.0" layoutY="316.0" mnemonicParsing="false" onAction="#OnSignUpbuttonclick" text="Sign up  " />
-      <Label fx:id="feedbackLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="284.0" prefHeight="25.0" prefWidth="301.0" textAlignment="CENTER" textFill="#c63838" />
+      <Label fx:id="feedbackLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="9.0" layoutY="284.0" prefHeight="25.0" prefWidth="328.0" textAlignment="CENTER" textFill="#c63838" />
    </children>
 </Pane>
